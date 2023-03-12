@@ -26,8 +26,3 @@ gcov_report: clean
 	$(CC) tests.cpp *test.cpp $(TESTFLAGS) $(WFLAGS) $(GCOVFLAGS)
 	./a.out
 	$(HTML_CREATE)
-
-style:
-	cp ../materials/linters/CPPLINT.cfg ./
-	python3 ../materials/linters/cpplint.py --extensions=cpp *.cpp *.h
-	rm CPPLINT.cfg
